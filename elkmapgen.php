@@ -30,7 +30,8 @@
  * Currently this does not support multiple board sitemaps, nor do I really expect it need such.
  * E has most of its boards private and BMR has most of its action hidden in PMs.
  *
- * If your forum breaks 20-30 million public posts, you might want to 
+ * If your forum breaks 20-30 million public posts, you might want to edit this
+ * script to add multiple board index maps, or possibly prune them.
  */
 
 // KEY is to make sure this script does not get called erroneously. Pick a key.
