@@ -230,7 +230,7 @@ else
     }
   }
 
-  $result = $db->query('', 'select t.id_topic, t.is_sticky, t.num_replies, b.id_board, m2.modified_time as fmodified_time, m1.poster_time as lposter_time, m1.modified_time as lmodified_time from {db_prefix}topics as t inner join {db_prefix}boards as b on b.id_board = t.id_board inner join {db_prefix}messages as m1 on t.id_last_msg=m1.id_msg inner join {db_prefix}messages as m2 on t.id_first_msg=m2.id_msg where b.member_groups LIKE "%-1%"');
+  $result = $db->query('', 'select t.id_topic, t.is_sticky, t.num_replies, b.id_board, m2.modified_time as fmodified_time, m1.poster_time as lposter_time, m1.modified_time as lmodified_time from {db_prefix}topics as t inner join {db_prefix}boards as b on b.id_board = t.id_board inner join {db_prefix}messages as m1 on t.id_last_msg=m1.id_msg inner join {db_prefix}messages as m2 on t.id_first_msg=m2.id_msg where b.member_groups LIKE "%-1%" '.$modquery);
   $topicmapper = explode('#', MAP_TOPICS);
   $fp = fopen(PATH_MAP.'/'.$topicmapper[0].dechex($num).$topicmapper[1], 'w');
   fwrite($fp, MAP_XML_HEAD);
